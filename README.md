@@ -6,7 +6,7 @@ Tvorba modelu
 * V prvom kole sme použili sieť, ktorá mala 1 skrytú vrstvu a na nej 16 neurónov
 * Chceli sme na nej zistiť najlepšiu kombináciu aktivačných funkcií
 * Ako aktivačné funkcie sme skúšali hyperbolický tangens, sigmoidovú funkciu, ReLU a nakoniec lineárnu funkciu
-* Testovali sme tak, že vyskúšali každú funkciu na každej vrstve a vypočítali sme si výslednú chybu ako 0.3train_error + 0.7test_error a následne sme si vybrali najlepších kandidátov.
+* Testovali sme tak, že sme vyskúšali každú funkciu na každej vrstve a vypočítali sme si výslednú chybu ako 0.3train_error + 0.7test_error a následne sme si vybrali najlepších kandidátov.
 * Trénovanie modelu prebiehalo v 50 epochách
 * Náhodné hodnoty sme genrovali z rozdelenia N(0, 1/3)
 * rýchlosť učenia alpha bola 0.1
@@ -29,7 +29,7 @@ linear, tanh   |0.79554702   |0.21604676  |0.38989684
 
 * Ale keďže výsledné hodnoty nie sú z intervalu [0, 1], na výslednej vrstve sme sa rozhodli použiť
 lineárnu funkciu x + 1 (+1 preto, lebo výsledné hodnoty viac zasahujú do kladných hodnôt ako záporných)
-* Následne sme odskúšali modely, ktoré mali na výslednej vrstve lineárnu aktivačnú funkciu a otestovalie sme
+* Následne sme odskúšali modely, ktoré mali na výslednej vrstve lineárnu aktivačnú funkciu a otestovali sme
 zvyšné 3 aktivačné funkcie na skrytej vrstve, aby sme zistili, ktorá bude najvhodnejšou
 * Počet učiacich sa epoch sme natavili teraz na 100 a alphu sme nechali rovnakú
 * Výsledné errory, ktoré sme dostali sú:
@@ -79,7 +79,7 @@ počet neurónov | total error
 
 Zisťovanie počtu skrytých verstiev
 ----------------------
-* V tomto kroku sme rozhodli otestovať, aký počet vrstiev je optimálny
+* V tomto kroku sme sa rozhodli otestovať, aký počet vrstiev je optimálny
 * Počas testovania sme zistili, že learning rate 0.1 je príliš veľký a vždy nám to preskočilo minimum pre error a pretiekli hodnoty, preto sme nastavili learning na 0.0005, s ktorým to už fungovalo bez problémov
 * Počet trénovacích epoch bol 400
 * Pozmenili sme generovanie náhodných váh z Gaussovho rozdelenia na rovnomerné z intervalu [-1, 1], lebo nám generovalo niekedy hodnoty väčšie ako 1
@@ -122,4 +122,3 @@ Pre cvičiach
 * Trénovanie u mňa trvalo pod 2 minúty
 * Po predikcii z dát vyzeralo porovnanie takto:
 ![comparison](comparison.png)
->>>>>>> 19dfdee (added files)
