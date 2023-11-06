@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# intro-2-AI-project
-=======
 PROJEKT Z UUI
 =============
 
